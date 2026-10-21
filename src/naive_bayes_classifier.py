@@ -11,7 +11,9 @@ class NaiveBayesClassifier:
         self.total_words = {}
         self.vocabulary = []
         self.is_trained = False
-
+    def has_known_features(self,vector):
+        return any(vector)
+    
     def fit(self, X, y, vocabulary):
         if not X or not y or len(X) != len(y):
             raise ValueError(
