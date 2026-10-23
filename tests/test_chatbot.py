@@ -45,5 +45,6 @@ class TestChatbot(unittest.TestCase):
             self.bot.get_response("who are you?"),
             "I am MiniChat AI, a simple chatbot built with Python."
         )
+    
 if __name__ == "__main__":
     unittest.main()

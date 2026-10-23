@@ -30,7 +30,11 @@ class TestTextPreprocessor(unittest.TestCase):
     def test_transform_before_fit(self):
         with self.assertRaises(ValueError):
             self.preprocessor.transform(["hello"])
-
+    def test_normalize(self):
+        self.assertEqual(
+            self.preprocessor.normalize("HELLO!!!"),
+            "hello"
+        )
 
 if __name__ == "__main__":
     unittest.main()
